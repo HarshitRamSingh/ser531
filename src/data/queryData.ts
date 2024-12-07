@@ -1,28 +1,26 @@
-
-
 export const variableCategoryData: Record<string, string[]> = {
-  "OverallPopulation": [
+  OverallPopulation: [
     "Population, low access to store, 2010",
     "Population, low access to store, 2015",
     "Population, low access to store (% change), 2010 -15",
     "Population, low access to store (%), 2010",
-    "Population, low access to store (%), 2015"
+    "Population, low access to store (%), 2015",
   ],
-  "HouseholdClassification": [
+  HouseholdClassification: [
     "Low income & low access to store, 2010",
     "Low income & low access to store, 2015",
     "Low income & low access to store (% change), 2010 - 15",
-    "Low income & low access to store (%), 2010",
-    "Low income & low access to store (%), 2015",
     "Households, no car & low access to store, 2010",
     "Households, no car & low access to store, 2015",
     "Households, no car & low access to store (% change), 2010 - 15",
+    "Low income & low access to store (%), 2010",
+    "Low income & low access to store (%), 2015",
     "Households, no car & low access to store (%), 2010",
     "Households, no car & low access to store (%), 2015",
+    "SNAP households, low access to store (%), 2015",
     "SNAP households, low access to store, 2015",
-    "SNAP households, low access to store (%), 2015"
   ],
-  "Demographic": [
+  Demographic: [
     "% White, 2010",
     "% Black, 2010",
     "% Hispanic, 2010",
@@ -53,94 +51,94 @@ export const variableCategoryData: Record<string, string[]> = {
     "Asian, low access to store, 2015",
     "American Indian or Alaska Native, low access to store, 2015",
     "Hawaiian or Pacific Islander, low access to store, 2015",
-    "Multiracial, low access to store, 2015"
+    "Multiracial, low access to store, 2015",
   ],
-  "GroceryStore": [
+  GroceryStore: [
     "Grocery stores, 2011",
     "Grocery stores, 2016",
     "Grocery stores (% change), 2011-16",
     "Grocery stores/1,000 pop, 2011",
     "Grocery stores/1,000 pop, 2016",
-    "Grocery stores/1,000 pop (% change), 2011-16"
+    "Grocery stores/1,000 pop (% change), 2011-16",
   ],
-  "SupercenterStore": [
+  SupercenterStore: [
     "Supercenters & club stores, 2011",
     "Supercenters & club stores, 2016",
     "Supercenters & club stores (% change), 2011-16",
     "Supercenters & club stores/1,000 pop, 2011",
     "Supercenters & club stores/1,000 pop, 2016",
-    "Supercenters & club stores/1,000 pop (% change), 2011-16"
+    "Supercenters & club stores/1,000 pop (% change), 2011-16",
   ],
-  "ConvenienceStore": [
+  ConvenienceStore: [
     "Convenience stores, 2011",
     "Convenience stores, 2016",
     "Convenience stores (% change), 2011-16",
     "Convenience stores/1,000 pop, 2011",
-    "Convenience stores/1,000 pop, 2016"
+    "Convenience stores/1,000 pop, 2016",
   ],
-  "SpeacializedStore": [
+  SpeacializedStore: [
     "Specialized food stores, 2011",
     "Specialized food stores, 2016",
     "Specialized food stores (% change), 2011-16",
     "Specialized food stores/1,000 pop, 2011",
-    "Specialized food stores/1,000 pop, 2016"
+    "Specialized food stores/1,000 pop, 2016",
   ],
-  "SNAPAuthStore": [
+  SNAPAuthStore: [
     "SNAP-authorized stores, 2012",
     "SNAP-authorized stores, 2017",
     "SNAP-authorized stores (% change), 2012-17",
     "SNAP-authorized stores/1,000 pop, 2012",
-    "SNAP-authorized stores/1,000 pop, 2017"
+    "SNAP-authorized stores/1,000 pop, 2017",
   ],
-  "WICAuthStore": [
+  WICAuthStore: [
     "WIC-authorized stores, 2011",
     "WIC-authorized stores, 2016",
     "WIC-authorized stores (% change), 2011-16",
     "WIC-authorized stores/1,000 pop, 2011",
-    "WIC-authorized stores/1,000 pop, 2016"
+    "WIC-authorized stores/1,000 pop, 2016",
   ],
-  "FastFoodRestaurant": [
+  FastFoodRestaurant: [
     "Fast-food restaurants, 2011",
     "Fast-food restaurants, 2016",
     "Fast-food restaurants (% change), 2011-16",
     "Fast-food restaurants/1,000 pop, 2011",
-    "Fast-food restaurants/1,000 pop, 2016"
+    "Fast-food restaurants/1,000 pop, 2016",
   ],
-  "FullServiceRestaurant": [
+  FullServiceRestaurant: [
     "Full-service restaurants, 2011",
     "Full-service restaurants, 2016",
     "Full-service restaurants (% change), 2011-16",
     "Full-service restaurants/1,000 pop, 2011",
     "Full-service restaurants/1,000 pop, 2016",
-    "Full-service restaurants/1,000 pop (% change), 2011-16"
+    "Full-service restaurants/1,000 pop (% change), 2011-16",
   ],
-  "SNAPStores": [
+  SNAPStores: [
     "SNAP redemptions/SNAP-authorized stores, 2012",
     "SNAP redemptions/SNAP-authorized stores, 2017",
     "SNAP redemptions/SNAP-authorized stores (% change), 2012-17",
     "SNAP participants (% pop), 2012*",
     "SNAP participants (% pop), 2017*",
-    "SNAP benefits per capita (% change), 2012-17",
     "SNAP participants (% eligible pop), 2011*",
-    "SNAP participants (% eligible pop), 2016*"
+    "SNAP participants (% eligible pop), 2016*",
+    "SNAP benefits per capita (% change), 2012-17",
   ],
-  "NationalSchoolLunchProgramStores": [
+  NationalSchoolLunchProgramStores: [
     "National School Lunch Program participants (% children), 2012*",
     "National School Lunch Program participants (% children), 2017*",
     "Students eligible for free lunch (%), 2010",
     "Students eligible for free lunch (%), 2015",
     "Students eligible for reduced-price lunch (%), 2010",
-    "Students eligible for reduced-price lunch (%), 2015"
+    "Students eligible for reduced-price lunch (%), 2015",
   ],
-  "SchoolBreakfastProgramStores": [
+  SchoolBreakfastProgramStores: [
     "School Breakfast Program participants (% children), 2012*",
-    "School Breakfast Program participants (% children), 2017*"
+    "School Breakfast Program participants (% children), 2017*",
   ],
-  "SummerFoodServiceProgramStores": [
+  SummerFoodServiceProgramStores: [
     "Summer Food Service Program participants (% children), 2012*",
-    "Summer Food Service Program participants (% children), 2017*"
+    "Summer Food Service Program participants (% children), 2017*",
   ],
-  "WICStores": [
+  WICStores: [
     "WIC redemptions per capita, 2011",
     "WIC redemptions per capita, 2016",
     "WIC redemptions per capita (% change), 2011-16",
@@ -152,18 +150,18 @@ export const variableCategoryData: Record<string, string[]> = {
     "WIC infant and children participants (% infant & children), 2014*",
     "WIC infant and children participants (% infant & children), 2016*",
     "WIC women participants (% women), 2014*",
-    "WIC women participants (% women), 2016*"
+    "WIC women participants (% women), 2016*",
   ],
-  "ChildAndAdultCareStores": [
+  ChildAndAdultCareStores: [
     "Child & Adult Care (% pop), 2012*",
-    "Child & Adult Care (% pop), 2017*"
+    "Child & Adult Care (% pop), 2017*",
   ],
-  "FDPIRStores": [
+  FDPIRStores: [
     "FDPIR Sites, 2012",
     "FDPIR Sites, 2015",
-    "FDPIR Sites, 2012-15"
+    "FDPIR Sites, 2012-15",
   ],
-  "DirectFarmSales": [
+  DirectFarmSales: [
     "Direct farm sales (%), 2007",
     "Direct farm sales (%), 2012",
     "Direct farm sales, 2007",
@@ -171,39 +169,39 @@ export const variableCategoryData: Record<string, string[]> = {
     "Direct farm sales (% change), 2007 - 12",
     "Direct farm sales per capita, 2007",
     "Direct farm sales per capita, 2012",
-    "Direct farm sales per capita (% change), 2007 - 12"
+    "Direct farm sales per capita (% change), 2007 - 12",
   ],
-  "FarmersMarketSales": [
+  FarmersMarketSales: [
     "Farmers' markets, 2013",
     "Farmers' markets, 2018",
     "Farmers' markets (% change), 2013-18",
     "Farmers' markets/1,000 pop, 2013",
     "Farmers' markets/1,000 pop, 2018",
-    "Farmers' markets/1,000 pop (% change), 2013-18"
+    "Farmers' markets/1,000 pop (% change), 2013-18",
   ],
-  "MarketsAcceptingX": [
+  MarketsAcceptingX: [
     "Farmers' markets that report accepting SNAP, 2018",
-    "Farmers' markets that report accepting SNAP (%), 2018",
     "Farmers' markets that report accepting WIC, 2018",
-    "Farmers' markets that report accepting WIC (%), 2018",
     "Farmers' markets that report accepting WIC Cash, 2018",
-    "Farmers' markets that report accepting WIC Cash (%), 2018",
     "Farmers' markets that report accepting SFMNP, 2018",
-    "Farmers' markets that report accepting SFMNP (%), 2018",
     "Farmers' markets that report accepting credit cards, 2018",
-    "Farmers' markets that report accepting credit cards (%), 2018"
+    "Farmers' markets that report accepting SNAP (%), 2018",
+    "Farmers' markets that report accepting WIC (%), 2018",
+    "Farmers' markets that report accepting WIC Cash (%), 2018",
+    "Farmers' markets that report accepting SFMNP (%), 2018",
+    "Farmers' markets that report accepting credit cards (%), 2018",
   ],
-  "MarketsSellingX": [
+  MarketsSellingX: [
     "Farmers' markets that report selling fruit & vegetables, 2018",
-    "Farmers' markets that report selling fruit & vegetables (%), 2018",
     "Farmers' markets that report selling animal products, 2018",
-    "Farmers' markets that report selling animal products (%), 2018",
     "Farmers' markets that report selling baked/prepared food products, 2018",
-    "Farmers' markets that report selling baked/prepared food products (%), 2018",
     "Farmers' markets that report selling other food products, 2018",
-    "Farmers' markets that report selling other food products (%), 2018"
+    "Farmers' markets that report selling fruit & vegetables (%), 2018",
+    "Farmers' markets that report selling animal products (%), 2018",
+    "Farmers' markets that report selling baked/prepared food products (%), 2018",
+    "Farmers' markets that report selling other food products (%), 2018",
   ],
-  "Farms": [
+  Farms: [
     "Farms with vegetables harvested for fresh market (% change), 2007 - 12",
     "Vegetable acres harvested for fresh market (% change), 2007 - 12",
     "Vegetable acres harvested for fresh market/1,000 pop (% change), 2007 - 12",
@@ -227,10 +225,10 @@ export const variableCategoryData: Record<string, string[]> = {
     "Orchard acres/1,000 pop (% change), 2007 - 12",
     "Orchard farms, 2007",
     "Orchard farms, 2012",
-    "Orchard acres/1,000 pop, 2007",
-    "Orchard acres/1,000 pop, 2012",
     "Orchard acres, 2007",
     "Orchard acres, 2012",
+    "Orchard acres/1,000 pop, 2007",
+    "Orchard acres/1,000 pop, 2012",
     "Greenhouse vegetable sq ft/1,000 pop, 2007",
     "Greenhouse vegetable sq ft/1,000 pop, 2012",
     "Greenhouse vegetable sq ft, 2007",
@@ -238,19 +236,19 @@ export const variableCategoryData: Record<string, string[]> = {
     "Farms with greenhouses growing vegetables (% change), 2007 - 12",
     "Greenhouse vegetable sq ft (% change), 2007 - 12",
     "Greenhouse vegetable sq ft/1,000 pop (% change), 2007 - 12",
-    "Farms with greenhouses growing vegetables, 2007",
-    "Farms with greenhouses growing vegetables, 2012",
     "Berry farms (% change), 2007 - 12",
     "Berry acres (% change), 2007 - 12",
     "Berry acres/1,000 pop (% change), 2007 - 12",
-    "Berry farms, 2007",
-    "Berry farms, 2012",
     "Berry acres/1,000 pop, 2007",
     "Berry acres/1,000 pop, 2012",
+    "Farms with greenhouses growing vegetables, 2007",
+    "Farms with greenhouses growing vegetables, 2012",
+    "Berry farms, 2007",
+    "Berry farms, 2012",
     "Berry acres, 2007",
-    "Berry acres, 2012"
+    "Berry acres, 2012",
   ],
-  "OtherLocalOutlets": [
+  OtherLocalOutlets: [
     "Farms reporting CSA (% change), 2007 - 12",
     "Farms reporting agritourism operations (% change), 2007 - 12",
     "Agritourism receipts (% change), 2007 - 12",
@@ -259,30 +257,284 @@ export const variableCategoryData: Record<string, string[]> = {
     "Farms reporting CSA, 2007",
     "Farms reporting CSA, 2012",
     "Farms reporting agritourism operations, 2007",
-    "Farms reporting agritourism operations, 2012"
+    "Farms reporting agritourism operations, 2012",
   ],
-  "Diabetes": ["Adult diabetes rate, 2008", "Adult diabetes rate, 2013"],
-  "Obesity": ["Adult obesity rate, 2012*", "Adult obesity rate, 2017*"],
-  "RecreationAndFitnessFacilities": [
+  Diabetes: ["Adult diabetes rate, 2008", "Adult diabetes rate, 2013"],
+  Obesity: ["Adult obesity rate, 2012*", "Adult obesity rate, 2017*"],
+  RecreationAndFitnessFacilities: [
     "High schoolers physically active (%), 2017*",
     "Recreation & fitness facilities, 2011",
     "Recreation & fitness facilities, 2016",
     "Recreation & fitness facilities (% change), 2011-16",
     "Recreation & fitness facilities/1,000 pop, 2011",
     "Recreation & fitness facilities/1,000 pop, 2016",
-    "Recreation & fitness facilities/1,000 pop (% change), 2011-16"
+    "Recreation & fitness facilities/1,000 pop (% change), 2011-16",
   ],
-  "Mortality": [
+  Mortality: [
     "Change in mortality %, due to Nutritional Deficiencies",
     "Change in mortality %, due to Cardiovascular Diseases",
     "Change in mortality %, due to Digestive Diseases",
     "Change in mortality %, due to Diabetes",
-    "Change in mortality %, due to Diarrhea"
-  ]
+    "Change in mortality %, due to Diarrhea",
+  ],
+};
+
+export const variableDataProperties: Record<string, string[]> = {
+  count: [
+    "Population, low access to store, 2010",
+    "Population, low access to store, 2015",
+    "Low income & low access to store, 2010",
+    "Low income & low access to store, 2015",
+    "Households, no car & low access to store, 2010",
+    "Households, no car & low access to store, 2015",
+    "SNAP households, low access to store, 2015",
+    "SNAP households, low access to store (%), 2015",
+    "Children, low access to store, 2010",
+    "Children, low access to store, 2015",
+    "Seniors, low access to store, 2010",
+    "Seniors, low access to store, 2015",
+    "White, low access to store, 2015",
+    "Black, low access to store, 2015",
+    "Hispanic ethnicity, low access to store, 2015",
+    "Asian, low access to store, 2015",
+    "American Indian or Alaska Native, low access to store, 2015",
+    "Hawaiian or Pacific Islander, low access to store, 2015",
+    "Multiracial, low access to store, 2015",
+    "Grocery stores, 2011",
+    "Grocery stores, 2016",
+    "Supercenters & club stores, 2011",
+    "Supercenters & club stores, 2016",
+    "Convenience stores, 2011",
+    "Convenience stores, 2016",
+    "Specialized food stores, 2011",
+    "Specialized food stores, 2016",
+    "SNAP-authorized stores, 2012",
+    "SNAP-authorized stores, 2017",
+    "WIC-authorized stores, 2011",
+    "WIC-authorized stores, 2016",
+    "Fast-food restaurants, 2011",
+    "Fast-food restaurants, 2016",
+    "Full-service restaurants, 2011",
+    "Full-service restaurants, 2016",
+    "SNAP redemptions/SNAP-authorized stores, 2012",
+    "SNAP redemptions/SNAP-authorized stores, 2017",
+    "WIC redemptions per capita, 2011",
+    "WIC redemptions per capita, 2016",
+    "WIC redemptions/WIC-authorized stores, 2011",
+    "WIC redemptions/WIC-authorized stores, 2016",
+    "FDPIR Sites, 2012",
+    "FDPIR Sites, 2015",
+    "FDPIR Sites, 2012-15",
+    "Farmers' markets, 2013",
+    "Farmers' markets, 2018",
+    "Farmers' markets that report accepting SNAP, 2018",
+    "Farmers' markets that report accepting WIC, 2018",
+    "Farmers' markets that report accepting WIC Cash, 2018",
+    "Farmers' markets that report accepting SFMNP, 2018",
+    "Farmers' markets that report accepting credit cards, 2018",
+    "Farmers' markets that report selling fruit & vegetables, 2018",
+    "Farmers' markets that report selling animal products, 2018",
+    "Farmers' markets that report selling baked/prepared food products, 2018",
+    "Farmers' markets that report selling other food products, 2018",
+    "Farms with vegetables harvested for fresh market, 2007",
+    "Farms with vegetables harvested for fresh market, 2012",
+    "Vegetable farms, 2007",
+    "Vegetable farms, 2012",
+    "Orchard farms, 2007",
+    "Orchard farms, 2012",
+    "Orchard acres, 2007",
+    "Orchard acres, 2012",
+    "Farms with greenhouses growing vegetables, 2007",
+    "Farms with greenhouses growing vegetables, 2012",
+    "Berry farms, 2007",
+    "Berry farms, 2012",
+    "Berry acres, 2007",
+    "Berry acres, 2012",
+    "Farms reporting CSA, 2007",
+    "Farms reporting CSA, 2012",
+    "Farms reporting agritourism operations, 2007",
+    "Farms reporting agritourism operations, 2012",
+    "Adult diabetes rate, 2008",
+    "Adult diabetes rate, 2013",
+    "Adult obesity rate, 2012*",
+    "Adult obesity rate, 2017*",
+    "Recreation & fitness facilities, 2011",
+    "Recreation & fitness facilities, 2016",
+  ],
+  percent: [
+    "Population, low access to store (%), 2010",
+    "Population, low access to store (%), 2015",
+    "Low income & low access to store (%), 2010",
+    "Low income & low access to store (%), 2015",
+    "Households, no car & low access to store (%), 2010",
+    "Households, no car & low access to store (%), 2015",
+    "SNAP households, low access to store (%), 2015",
+    "% White, 2010",
+    "% Black, 2010",
+    "% Hispanic, 2010",
+    "% Asian, 2010",
+    "% American Indian or Alaska Native, 2010",
+    "% Hawaiian or Pacific Islander, 2010",
+    "% Population 65 years or older, 2010",
+    "% Population under age 18, 2010",
+    "Children, low access to store (%), 2010",
+    "Children, low access to store (%), 2015",
+    "Seniors, low access to store (%), 2010",
+    "Seniors, low access to store (%), 2015",
+    "White, low access to store (%), 2015",
+    "Black, low access to store (%), 2015",
+    "Hispanic ethnicity, low access to store (%), 2015",
+    "Asian, low access to store (%), 2015",
+    "American Indian or Alaska Native, low access to store (%), 2015",
+    "Hawaiian or Pacific Islander, low access to store (%), 2015",
+    "Multiracial, low access to store (%), 2015",
+    "SNAP participants (% pop), 2012*",
+    "SNAP participants (% pop), 2017*",
+    "SNAP participants (% eligible pop), 2011*",
+    "SNAP participants (% eligible pop), 2016*",
+    "National School Lunch Program participants (% children), 2012*",
+    "National School Lunch Program participants (% children), 2017*",
+    "Students eligible for free lunch (%), 2010",
+    "Students eligible for free lunch (%), 2015",
+    "Students eligible for reduced-price lunch (%), 2010",
+    "Students eligible for reduced-price lunch (%), 2015",
+    "Summer Food Service Program participants (% children), 2012*",
+    "Summer Food Service Program participants (% children), 2017*",
+    "School Breakfast Program participants (% children), 2012*",
+    "School Breakfast Program participants (% children), 2017*",
+    "WIC participants (% pop), 2012*",
+    "WIC participants (% pop), 2017*",
+    "WIC infant and children participants (% infant & children), 2014*",
+    "WIC infant and children participants (% infant & children), 2016*",
+    "WIC women participants (% women), 2014*",
+    "WIC women participants (% women), 2016*",
+    "Child & Adult Care (% pop), 2012*",
+    "Child & Adult Care (% pop), 2017*",
+    "Direct farm sales (%), 2007",
+    "Direct farm sales (%), 2012",
+    "Farmers' markets that report accepting SNAP (%), 2018",
+    "Farmers' markets that report accepting WIC (%), 2018",
+    "Farmers' markets that report accepting WIC Cash (%), 2018",
+    "Farmers' markets that report accepting SFMNP (%), 2018",
+    "Farmers' markets that report accepting credit cards (%), 2018",
+    "Farmers' markets that report selling fruit & vegetables (%), 2018",
+    "Farmers' markets that report selling animal products (%), 2018",
+    "Farmers' markets that report selling baked/prepared food products (%), 2018",
+    "Farmers' markets that report selling other food products (%), 2018",
+    "High schoolers physically active (%), 2017*",
+  ],
+  percentageChange: [
+    "Population, low access to store (% change), 2010 -15",
+    "Low income & low access to store (% change), 2010 - 15",
+    "Households, no car & low access to store (% change), 2010 - 15",
+    "Seniors, low access to store (% change), 2010 - 15",
+    "Grocery stores (% change), 2011-16",
+    "Grocery stores/1,000 pop (% change), 2011-16",
+    "Supercenters & club stores (% change), 2011-16",
+    "Supercenters & club stores/1,000 pop (% change), 2011-16",
+    "Convenience stores (% change), 2011-16",
+    "Specialized food stores (% change), 2011-16",
+    "SNAP-authorized stores (% change), 2012-17",
+    "WIC-authorized stores (% change), 2011-16",
+    "Fast-food restaurants (% change), 2011-16",
+    "Full-service restaurants (% change), 2011-16",
+    "Full-service restaurants/1,000 pop (% change), 2011-16",
+    "SNAP redemptions/SNAP-authorized stores (% change), 2012-17",
+    "SNAP benefits per capita (% change), 2012-17",
+    "WIC redemptions per capita (% change), 2011-16",
+    "WIC redemptions/WIC-authorized stores (% change), 2011-16",
+    "Direct farm sales (% change), 2007 - 12",
+    "Direct farm sales per capita (% change), 2007 - 12",
+    "Farmers' markets (% change), 2013-18",
+    "Farmers' markets/1,000 pop (% change), 2013-18",
+    "Farms with vegetables harvested for fresh market (% change), 2007 - 12",
+    "Vegetable acres harvested for fresh market (% change), 2007 - 12",
+    "Vegetable acres harvested for fresh market/1,000 pop (% change), 2007 - 12",
+    "Vegetable farms (% change), 2007 - 12",
+    "Vegetable acres harvested (% change), 2007 - 12",
+    "Vegetable acres harvested/1,000 pop (% change), 2007 - 12",
+    "Orchard farms (% change), 2007 - 12",
+    "Orchard acres (% change), 2007 - 12",
+    "Orchard acres/1,000 pop (% change), 2007 - 12",
+    "Greenhouse vegetable sq ft/1,000 pop (% change), 2007 - 12",
+    "Greenhouse vegetable sq ft (% change), 2007 - 12",
+    "Farms with greenhouses growing vegetables (% change), 2007 - 12",
+    "Berry farms (% change), 2007 - 12",
+    "Berry acres (% change), 2007 - 12",
+    "Berry acres/1,000 pop (% change), 2007 - 12",
+    "Farms reporting CSA (% change), 2007 - 12",
+    "Farms reporting agritourism operations (% change), 2007 - 12",
+    "Agritourism receipts (% change), 2007 - 12",
+    "Recreation & fitness facilities (% change), 2011-16",
+    "Recreation & fitness facilities/1,000 pop (% change), 2011-16",
+    "Change in mortality %, due to Nutritional Deficiencies",
+    "Change in mortality %, due to Cardiovascular Diseases",
+    "Change in mortality %, due to Digestive Diseases",
+    "Change in mortality %, due to Diabetes",
+    "Change in mortality %, due to Diarrhea",
+  ],
+  countPerThousand: [
+    "Grocery stores/1,000 pop, 2011",
+    "Grocery stores/1,000 pop, 2016",
+    "Supercenters & club stores/1,000 pop, 2011",
+    "Supercenters & club stores/1,000 pop, 2016",
+    "Convenience stores/1,000 pop, 2011",
+    "Convenience stores/1,000 pop, 2016",
+    "Specialized food stores/1,000 pop, 2011",
+    "Specialized food stores/1,000 pop, 2016",
+    "SNAP-authorized stores/1,000 pop, 2012",
+    "SNAP-authorized stores/1,000 pop, 2017",
+    "WIC-authorized stores/1,000 pop, 2011",
+    "WIC-authorized stores/1,000 pop, 2016",
+    "Fast-food restaurants/1,000 pop, 2011",
+    "Fast-food restaurants/1,000 pop, 2016",
+    "Full-service restaurants/1,000 pop, 2011",
+    "Full-service restaurants/1,000 pop, 2016",
+    "Farmers' markets/1,000 pop, 2013",
+    "Farmers' markets/1,000 pop, 2018",
+    "Recreation & fitness facilities/1,000 pop, 2011",
+    "Recreation & fitness facilities/1,000 pop, 2016",
+  ],
+  acres: [
+    "Vegetable acres harvested for fresh market, 2007",
+    "Vegetable acres harvested for fresh market, 2012",
+    "Vegetable acres harvested, 2007",
+    "Vegetable acres harvested, 2012",
+    "Orchard acres, 2007",
+    "Orchard acres, 2012",
+    "Berry acres, 2007",
+    "Berry acres, 2012",
+  ],
+  acresPerThousand: [
+    "Vegetable acres harvested for fresh market/1,000 pop, 2007",
+    "Vegetable acres harvested for fresh market/1,000 pop, 2012",
+    "Vegetable acres harvested/1,000 pop, 2007",
+    "Vegetable acres harvested/1,000 pop, 2012",
+    "Orchard acres/1,000 pop, 2007",
+    "Orchard acres/1,000 pop, 2012",
+    "Berry acres/1,000 pop, 2007",
+    "Berry acres/1,000 pop, 2012",
+  ],
+  squareFeetPerThousand: [
+    "Greenhouse vegetable sq ft/1,000 pop, 2007",
+    "Greenhouse vegetable sq ft/1,000 pop, 2012",
+  ],
+  sqauareFeet: [
+    "Greenhouse vegetable sq ft, 2007",
+    "Greenhouse vegetable sq ft, 2012",
+  ],
+  dollars: [
+    "Agritourism receipts ($1,000), 2007",
+    "Agritourism receipts ($1,000), 2012",
+    "Direct farm sales, 2007",
+    "Direct farm sales, 2012",
+    "Direct farm sales per capita, 2007",
+    "Direct farm sales per capita, 2012",
+  ],
 };
 
 export const stateCountyData: Record<string, string[]> = {
-  "Alaska": [
+  Alaska: [
     "Aleutians East",
     "Aleutians West",
     "Anchorage",
@@ -311,9 +563,9 @@ export const stateCountyData: Record<string, string[]> = {
     "Wade Hampton",
     "Wrangell",
     "Yakutat",
-    "Yukon-Koyukuk"
+    "Yukon-Koyukuk",
   ],
-  "Alabama": [
+  Alabama: [
     "Autauga",
     "Baldwin",
     "Barbour",
@@ -380,9 +632,9 @@ export const stateCountyData: Record<string, string[]> = {
     "Walker",
     "Washington",
     "Wilcox",
-    "Winston"
+    "Winston",
   ],
-  "Arkansas": [
+  Arkansas: [
     "Arkansas",
     "Ashley",
     "Baxter",
@@ -457,9 +709,9 @@ export const stateCountyData: Record<string, string[]> = {
     "Washington",
     "White",
     "Woodruff",
-    "Yell"
+    "Yell",
   ],
-  "Arizona": [
+  Arizona: [
     "Apache",
     "Cochise",
     "Coconino",
@@ -474,9 +726,9 @@ export const stateCountyData: Record<string, string[]> = {
     "Pinal",
     "Santa Cruz",
     "Yavapai",
-    "Yuma"
+    "Yuma",
   ],
-  "California": [
+  California: [
     "Alameda",
     "Alpine",
     "Amador",
@@ -534,9 +786,9 @@ export const stateCountyData: Record<string, string[]> = {
     "Tuolumne",
     "Ventura",
     "Yolo",
-    "Yuba"
+    "Yuba",
   ],
-  "Colorado": [
+  Colorado: [
     "Adams",
     "Alamosa",
     "Arapahoe",
@@ -600,9 +852,9 @@ export const stateCountyData: Record<string, string[]> = {
     "Teller",
     "Washington",
     "Weld",
-    "Yuma"
+    "Yuma",
   ],
-  "Connecticut": [
+  Connecticut: [
     "Fairfield",
     "Hartford",
     "Litchfield",
@@ -610,17 +862,11 @@ export const stateCountyData: Record<string, string[]> = {
     "New Haven",
     "New London",
     "Tolland",
-    "Windham"
+    "Windham",
   ],
-  "DC": [
-    "District of Columbia"
-  ],
-  "Delaware": [
-    "Kent",
-    "New Castle",
-    "Sussex"
-  ],
-  "Florida": [
+  DC: ["District of Columbia"],
+  Delaware: ["Kent", "New Castle", "Sussex"],
+  Florida: [
     "Alachua",
     "Baker",
     "Bay",
@@ -687,9 +933,9 @@ export const stateCountyData: Record<string, string[]> = {
     "Volusia",
     "Wakulla",
     "Walton",
-    "Washington"
+    "Washington",
   ],
-  "Georgia": [
+  Georgia: [
     "Appling",
     "Atkinson",
     "Bacon",
@@ -848,16 +1094,10 @@ export const stateCountyData: Record<string, string[]> = {
     "Wilcox",
     "Wilkes",
     "Wilkinson",
-    "Worth"
+    "Worth",
   ],
-  "Hawaii": [
-    "Hawaii",
-    "Honolulu",
-    "Kalawao",
-    "Kauai",
-    "Maui"
-  ],
-  "Iowa": [
+  Hawaii: ["Hawaii", "Honolulu", "Kalawao", "Kauai", "Maui"],
+  Iowa: [
     "Adair",
     "Adams",
     "Allamakee",
@@ -956,9 +1196,9 @@ export const stateCountyData: Record<string, string[]> = {
     "Winneshiek",
     "Woodbury",
     "Worth",
-    "Wright"
+    "Wright",
   ],
-  "Idaho": [
+  Idaho: [
     "Ada",
     "Adams",
     "Bannock",
@@ -1002,9 +1242,9 @@ export const stateCountyData: Record<string, string[]> = {
     "Teton",
     "Twin Falls",
     "Valley",
-    "Washington"
+    "Washington",
   ],
-  "Illinois": [
+  Illinois: [
     "Adams",
     "Alexander",
     "Bond",
@@ -1106,9 +1346,9 @@ export const stateCountyData: Record<string, string[]> = {
     "Will",
     "Williamson",
     "Winnebago",
-    "Woodford"
+    "Woodford",
   ],
-  "Indiana": [
+  Indiana: [
     "Adams",
     "Allen",
     "Bartholomew",
@@ -1200,9 +1440,9 @@ export const stateCountyData: Record<string, string[]> = {
     "Wayne",
     "Wells",
     "White",
-    "Whitley"
+    "Whitley",
   ],
-  "Kansas": [
+  Kansas: [
     "Allen",
     "Anderson",
     "Atchison",
@@ -1307,9 +1547,9 @@ export const stateCountyData: Record<string, string[]> = {
     "Wichita",
     "Wilson",
     "Woodson",
-    "Wyandotte"
+    "Wyandotte",
   ],
-  "Kentucky": [
+  Kentucky: [
     "Adair",
     "Allen",
     "Anderson",
@@ -1429,9 +1669,9 @@ export const stateCountyData: Record<string, string[]> = {
     "Webster",
     "Whitley",
     "Wolfe",
-    "Woodford"
+    "Woodford",
   ],
-  "Louisiana": [
+  Louisiana: [
     "Acadia",
     "Allen",
     "Ascension",
@@ -1495,9 +1735,9 @@ export const stateCountyData: Record<string, string[]> = {
     "West Baton Rouge",
     "West Carroll",
     "West Feliciana",
-    "Winn"
+    "Winn",
   ],
-  "Massachusetts": [
+  Massachusetts: [
     "Barnstable",
     "Berkshire",
     "Bristol",
@@ -1511,9 +1751,9 @@ export const stateCountyData: Record<string, string[]> = {
     "Norfolk",
     "Plymouth",
     "Suffolk",
-    "Worcester"
+    "Worcester",
   ],
-  "Maryland": [
+  Maryland: [
     "Allegany",
     "Anne Arundel",
     "Baltimore",
@@ -1536,9 +1776,9 @@ export const stateCountyData: Record<string, string[]> = {
     "Talbot",
     "Washington",
     "Wicomico",
-    "Worcester"
+    "Worcester",
   ],
-  "Maine": [
+  Maine: [
     "Androscoggin",
     "Aroostook",
     "Cumberland",
@@ -1554,9 +1794,9 @@ export const stateCountyData: Record<string, string[]> = {
     "Somerset",
     "Waldo",
     "Washington",
-    "York"
+    "York",
   ],
-  "Michigan": [
+  Michigan: [
     "Alcona",
     "Alger",
     "Allegan",
@@ -1639,9 +1879,9 @@ export const stateCountyData: Record<string, string[]> = {
     "Van Buren",
     "Washtenaw",
     "Wayne",
-    "Wexford"
+    "Wexford",
   ],
-  "Minnesota": [
+  Minnesota: [
     "Aitkin",
     "Anoka",
     "Becker",
@@ -1728,9 +1968,9 @@ export const stateCountyData: Record<string, string[]> = {
     "Wilkin",
     "Winona",
     "Wright",
-    "Yellow Medicine"
+    "Yellow Medicine",
   ],
-  "Missouri": [
+  Missouri: [
     "Adair",
     "Andrew",
     "Atchison",
@@ -1844,9 +2084,9 @@ export const stateCountyData: Record<string, string[]> = {
     "Wayne",
     "Webster",
     "Worth",
-    "Wright"
+    "Wright",
   ],
-  "Mississippi": [
+  Mississippi: [
     "Adams",
     "Alcorn",
     "Amite",
@@ -1928,9 +2168,9 @@ export const stateCountyData: Record<string, string[]> = {
     "Wilkinson",
     "Winston",
     "Yalobusha",
-    "Yazoo"
+    "Yazoo",
   ],
-  "Montana": [
+  Montana: [
     "Beaverhead",
     "Big Horn",
     "Blaine",
@@ -1986,7 +2226,7 @@ export const stateCountyData: Record<string, string[]> = {
     "Valley",
     "Wheatland",
     "Wibaux",
-    "Yellowstone"
+    "Yellowstone",
   ],
   "North Carolina": [
     "Alamance",
@@ -2088,7 +2328,7 @@ export const stateCountyData: Record<string, string[]> = {
     "Wilkes",
     "Wilson",
     "Yadkin",
-    "Yancey"
+    "Yancey",
   ],
   "North Dakota": [
     "Adams",
@@ -2143,9 +2383,9 @@ export const stateCountyData: Record<string, string[]> = {
     "Walsh",
     "Ward",
     "Wells",
-    "Williams"
+    "Williams",
   ],
-  "Nebraska": [
+  Nebraska: [
     "Adams",
     "Antelope",
     "Arthur",
@@ -2238,7 +2478,7 @@ export const stateCountyData: Record<string, string[]> = {
     "Wayne",
     "Webster",
     "Wheeler",
-    "York"
+    "York",
   ],
   "New Hampshire": [
     "Belknap",
@@ -2250,7 +2490,7 @@ export const stateCountyData: Record<string, string[]> = {
     "Merrimack",
     "Rockingham",
     "Strafford",
-    "Sullivan"
+    "Sullivan",
   ],
   "New Jersey": [
     "Atlantic",
@@ -2273,7 +2513,7 @@ export const stateCountyData: Record<string, string[]> = {
     "Somerset",
     "Sussex",
     "Union",
-    "Warren"
+    "Warren",
   ],
   "New Mexico": [
     "Bernalillo",
@@ -2308,9 +2548,9 @@ export const stateCountyData: Record<string, string[]> = {
     "Taos",
     "Torrance",
     "Union",
-    "Valencia"
+    "Valencia",
   ],
-  "Nevada": [
+  Nevada: [
     "Churchill",
     "Clark",
     "Douglas",
@@ -2327,7 +2567,7 @@ export const stateCountyData: Record<string, string[]> = {
     "Storey",
     "Washoe",
     "White Pine",
-    "Carson City"
+    "Carson City",
   ],
   "New York": [
     "Albany",
@@ -2391,9 +2631,9 @@ export const stateCountyData: Record<string, string[]> = {
     "Wayne",
     "Westchester",
     "Wyoming",
-    "Yates"
+    "Yates",
   ],
-  "Ohio": [
+  Ohio: [
     "Adams",
     "Allen",
     "Ashland",
@@ -2481,9 +2721,9 @@ export const stateCountyData: Record<string, string[]> = {
     "Wayne",
     "Williams",
     "Wood",
-    "Wyandot"
+    "Wyandot",
   ],
-  "Oklahoma": [
+  Oklahoma: [
     "Adair",
     "Alfalfa",
     "Atoka",
@@ -2560,9 +2800,9 @@ export const stateCountyData: Record<string, string[]> = {
     "Washington",
     "Washita",
     "Woods",
-    "Woodward"
+    "Woodward",
   ],
-  "Oregon": [
+  Oregon: [
     "Baker",
     "Benton",
     "Clackamas",
@@ -2598,9 +2838,9 @@ export const stateCountyData: Record<string, string[]> = {
     "Wasco",
     "Washington",
     "Wheeler",
-    "Yamhill"
+    "Yamhill",
   ],
-  "Pennsylvania": [
+  Pennsylvania: [
     "Adams",
     "Allegheny",
     "Armstrong",
@@ -2667,15 +2907,9 @@ export const stateCountyData: Record<string, string[]> = {
     "Wayne",
     "Westmoreland",
     "Wyoming",
-    "York"
+    "York",
   ],
-  "Rhode Island": [
-    "Bristol",
-    "Kent",
-    "Newport",
-    "Providence",
-    "Washington"
-  ],
+  "Rhode Island": ["Bristol", "Kent", "Newport", "Providence", "Washington"],
   "South Carolina": [
     "Abbeville",
     "Aiken",
@@ -2722,7 +2956,7 @@ export const stateCountyData: Record<string, string[]> = {
     "Sumter",
     "Union",
     "Williamsburg",
-    "York"
+    "York",
   ],
   "South Dakota": [
     "Aurora",
@@ -2790,9 +3024,9 @@ export const stateCountyData: Record<string, string[]> = {
     "Union",
     "Walworth",
     "Yankton",
-    "Ziebach"
+    "Ziebach",
   ],
-  "Tennessee": [
+  Tennessee: [
     "Anderson",
     "Bedford",
     "Benton",
@@ -2887,9 +3121,9 @@ export const stateCountyData: Record<string, string[]> = {
     "Weakley",
     "White",
     "Williamson",
-    "Wilson"
+    "Wilson",
   ],
-  "Texas": [
+  Texas: [
     "Anderson",
     "Andrews",
     "Angelina",
@@ -3143,9 +3377,9 @@ export const stateCountyData: Record<string, string[]> = {
     "Yoakum",
     "Young",
     "Zapata",
-    "Zavala"
+    "Zavala",
   ],
-  "Utah": [
+  Utah: [
     "Beaver",
     "Box Elder",
     "Cache",
@@ -3174,9 +3408,9 @@ export const stateCountyData: Record<string, string[]> = {
     "Wasatch",
     "Washington",
     "Wayne",
-    "Weber"
+    "Weber",
   ],
-  "Virginia": [
+  Virginia: [
     "Accomack",
     "Albemarle",
     "Alleghany",
@@ -3305,9 +3539,9 @@ export const stateCountyData: Record<string, string[]> = {
     "Virginia Beach",
     "Waynesboro",
     "Williamsburg",
-    "Winchester"
+    "Winchester",
   ],
-  "Vermont": [
+  Vermont: [
     "Addison",
     "Bennington",
     "Caledonia",
@@ -3321,9 +3555,9 @@ export const stateCountyData: Record<string, string[]> = {
     "Rutland",
     "Washington",
     "Windham",
-    "Windsor"
+    "Windsor",
   ],
-  "Washington": [
+  Washington: [
     "Adams",
     "Asotin",
     "Benton",
@@ -3362,9 +3596,9 @@ export const stateCountyData: Record<string, string[]> = {
     "Walla Walla",
     "Whatcom",
     "Whitman",
-    "Yakima"
+    "Yakima",
   ],
-  "Wisconsin": [
+  Wisconsin: [
     "Adams",
     "Ashland",
     "Barron",
@@ -3436,7 +3670,7 @@ export const stateCountyData: Record<string, string[]> = {
     "Waupaca",
     "Waushara",
     "Winnebago",
-    "Wood"
+    "Wood",
   ],
   "West Virginia": [
     "Barbour",
@@ -3493,9 +3727,9 @@ export const stateCountyData: Record<string, string[]> = {
     "Wetzel",
     "Wirt",
     "Wood",
-    "Wyoming"
+    "Wyoming",
   ],
-  "Wyoming": [
+  Wyoming: [
     "Albany",
     "Big Horn",
     "Campbell",
@@ -3518,9 +3752,8 @@ export const stateCountyData: Record<string, string[]> = {
     "Teton",
     "Uinta",
     "Washakie",
-    "Weston"
-  ]
+    "Weston",
+  ],
 };
 
 export const years = [2010, 2011, 2012, 2013, 2014, 2015];
-
