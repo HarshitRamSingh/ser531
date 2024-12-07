@@ -316,8 +316,6 @@ export const variableDataProperties: Record<string, string[]> = {
     "Fast-food restaurants, 2016",
     "Full-service restaurants, 2011",
     "Full-service restaurants, 2016",
-    "SNAP redemptions/SNAP-authorized stores, 2012",
-    "SNAP redemptions/SNAP-authorized stores, 2017",
     "WIC redemptions per capita, 2011",
     "WIC redemptions per capita, 2016",
     "WIC redemptions/WIC-authorized stores, 2011",
@@ -519,7 +517,7 @@ export const variableDataProperties: Record<string, string[]> = {
     "Greenhouse vegetable sq ft/1,000 pop, 2007",
     "Greenhouse vegetable sq ft/1,000 pop, 2012",
   ],
-  sqauareFeet: [
+  squareFeet: [
     "Greenhouse vegetable sq ft, 2007",
     "Greenhouse vegetable sq ft, 2012",
   ],
@@ -530,6 +528,10 @@ export const variableDataProperties: Record<string, string[]> = {
     "Direct farm sales, 2012",
     "Direct farm sales per capita, 2007",
     "Direct farm sales per capita, 2012",
+  ],
+  dollarsPerStore: [
+    "SNAP redemptions/SNAP-authorized stores, 2012",
+    "SNAP redemptions/SNAP-authorized stores, 2017",
   ],
 };
 

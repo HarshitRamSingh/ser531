@@ -119,8 +119,11 @@ export function IntegratedQueryBuilder() {
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [jsonData, setJsonData] = useState<any>(null);
-  const valuePoints = [10, -20, 30, -40, 50];
+  const [valuePoints, setValuePoints] = useState<number[]>();
   const [showValidationAlert, setShowValidationAlert] = useState(false);
+  const [generatedMortalityQuery, setGeneratedMortalityQuery] = useState("");
+  const [jsonMortalityData, setJsonMortalityData] = useState<any>(null);
+  const [timePredicateTemp, setTimePredicateTemp] = useState(false);
 
   useEffect(() => {
     setSelectedCounty("");
@@ -174,33 +177,44 @@ export function IntegratedQueryBuilder() {
       return "smw:countPerThousand";
     } else if (variableDataProperties.acres.includes(variableType)) {
       return "smw:acres";
-    } else if (variableDataProperties.acresPerThousand.includes(variableType)) { 
+    } else if (variableDataProperties.acresPerThousand.includes(variableType)) {
       return "smw:acresPerThousand";
-    } else if (variableDataProperties.squareFeetPerThousand.includes(variableType)) {
+    } else if (
+      variableDataProperties.squareFeetPerThousand.includes(variableType)
+    ) {
       return "smw:squareFeetPerThousand";
     } else if (variableDataProperties.squareFeet.includes(variableType)) {
       return "smw:squareFeet";
     } else if (variableDataProperties.dollars.includes(variableType)) {
       return "smw:dollars";
+    } else if (variableDataProperties.dollarsPerStore.includes(variableType)) {
+      return "smw:dollarsPerStore";
     }
     return "";
   };
 
   const getTimeType = (variableType: string): string => {
     if (variableDataProperties.percentageChange.includes(variableType)) {
+      setTimePredicateTemp(true);
       return "smw:timePeriod";
     }
+    setTimePredicateTemp(false);
     return "smw:individualYear";
   };
 
   const handleGenerateQuery = () => {
-    if (!selectedState || !selectedCounty || !selectedVariableCategory || !selectedVariableType) {
+    if (
+      !selectedState ||
+      !selectedCounty ||
+      !selectedVariableCategory ||
+      !selectedVariableType
+    ) {
       setShowValidationAlert(true);
       // Hide the alert after 3 seconds
       setTimeout(() => setShowValidationAlert(false), 3000);
       return;
     }
-    
+
     setShowValidationAlert(false);
 
     const stateAbbr = getAbbreviation(selectedState);
@@ -242,19 +256,40 @@ WHERE {
     generatedQuery += `
 }`;
 
-  if (!isValidVariable(selectedVariableCategory, selectedVariableType)) {
-    setError("Invalid variable type selected");
-    return;
-  }
+    if (!isValidVariable(selectedVariableCategory, selectedVariableType)) {
+      setError("Invalid variable type selected");
+      return;
+    }
+    let generatedMortalityQuery = `PREFIX owl: <http://www.w3.org/2002/07/owl#>
+    PREFIX smw: <http://www.semanticweb.org/raajveer/ontologies/2024/10/SW531-Deliv3#>
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/#>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+    SELECT ?state ?county ?time ?variableTitle ?measurementPredicate
+    WHERE {
+      ?state a smw:State ;
+            foaf:title "${stateAbbr}"^^xsd:string ;
+            smw:stateHasCounty ?county .
+      ?county a smw:County ;
+              foaf:title "${selectedCounty}"^^xsd:string ;
+              smw:countyHasVariable ?demographic .
+      ?demographic a smw:Mortality ;
+      foaf:title ?variableTitle ;
+      smw:percentageChange ?measurementPredicate .
+  }`;
     setQuery(generatedQuery);
+    setGeneratedMortalityQuery(generatedMortalityQuery);
   };
+
   const graphData = {
     labels: [
+      "Cardiovascular Diseases",
       "Diabetes",
       "Diarrhea",
+      "Digestive Diseases",
       "Nutritional Deficiencies",
-      "Cardiovascular diseases",
-      "Digestive diseases",
     ],
     datasets: [
       {
@@ -288,6 +323,45 @@ WHERE {
       console.log(jsonData);
       setJsonData(data);
       setResults(data);
+      // const data: SparqlResults = await response.json();
+
+      // if (!response.ok) {
+      //   throw new Error(data.head?.vars ? "API error" : "Something went wrong");
+      // }
+
+      // setResults(data);
+    } catch (err: any) {
+      setError(err.message);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const handleMortalitySubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsLoading(true);
+    setError(null);
+    setResults(null);
+    try {
+      setIsLoading(true);
+      const response = await axios.get(
+        `http://74.179.61.231:7200/repositories/ser531new`,
+        {
+          params: {
+            query: generatedMortalityQuery.trim(),
+          },
+        }
+      );
+      const data = response.data;
+      console.log(jsonData);
+      setJsonMortalityData(data);
+      setResults(data);
+      const valuePoints = data.results.bindings.map((binding: any) => {
+        const value = binding.measurementPredicate?.value || "0";
+        return parseFloat(value);
+      });
+      console.log(valuePoints);
+      setValuePoints(valuePoints);
       // const data: SparqlResults = await response.json();
 
       // if (!response.ok) {
@@ -428,11 +502,16 @@ WHERE {
           </SelectContent>
         </Select> */}
       </div>
-      <Button 
-          onClick={handleGenerateQuery} 
-          disabled={!selectedState || !selectedCounty || !selectedVariableCategory || !selectedVariableType}
-        >
-          Generate SPARQL Query
+      <Button
+        onClick={handleGenerateQuery}
+        disabled={
+          !selectedState ||
+          !selectedCounty ||
+          !selectedVariableCategory ||
+          !selectedVariableType
+        }
+      >
+        Generate SPARQL Query
       </Button>
       <form onSubmit={handleSubmit} className="space-y-4">
         <Textarea
@@ -459,11 +538,19 @@ WHERE {
         >
           {isLoading ? "Executing..." : "Run Query"}
         </Button>
-
+        <Button
+          type="submit"
+          disabled={!timePredicateTemp}
+          onClick={handleMortalitySubmit}
+        >
+          {isLoading ? "Executing..." : "Compare Mortality Changes"}
+        </Button>
         {/* {renderResults()} */}
       </form>
       <DataTable jsonData={jsonData} />;
-      <div className="bar-chart-container">
+      <div
+        className={`bar-chart-container ${!timePredicateTemp ? "hidden" : ""}`}
+      >
         <Bar data={graphData} />
       </div>
     </div>
