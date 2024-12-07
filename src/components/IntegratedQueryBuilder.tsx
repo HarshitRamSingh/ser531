@@ -120,6 +120,7 @@ export function IntegratedQueryBuilder() {
   const [isLoading, setIsLoading] = useState(false);
   const [jsonData, setJsonData] = useState<any>(null);
   const valuePoints = [10, -20, 30, -40, 50];
+  const [showValidationAlert, setShowValidationAlert] = useState(false);
 
   useEffect(() => {
     setSelectedCounty("");
@@ -193,6 +194,15 @@ export function IntegratedQueryBuilder() {
   };
 
   const handleGenerateQuery = () => {
+    if (!selectedState || !selectedCounty || !selectedVariableCategory || !selectedVariableType) {
+      setShowValidationAlert(true);
+      // Hide the alert after 3 seconds
+      setTimeout(() => setShowValidationAlert(false), 3000);
+      return;
+    }
+    
+    setShowValidationAlert(false);
+
     const stateAbbr = getAbbreviation(selectedState);
     const measurementPredicate = getMeasurementType(selectedVariableType);
     const timePredicate = getTimeType(selectedVariableType);
@@ -232,6 +242,10 @@ WHERE {
     generatedQuery += `
 }`;
 
+  if (!isValidVariable(selectedVariableCategory, selectedVariableType)) {
+    setError("Invalid variable type selected");
+    return;
+  }
     setQuery(generatedQuery);
   };
   const graphData = {
@@ -414,8 +428,11 @@ WHERE {
           </SelectContent>
         </Select> */}
       </div>
-      <Button onClick={handleGenerateQuery} disabled={!selectedState}>
-        Generate SPARQL Query
+      <Button 
+          onClick={handleGenerateQuery} 
+          disabled={!selectedState || !selectedCounty || !selectedVariableCategory || !selectedVariableType}
+        >
+          Generate SPARQL Query
       </Button>
       <form onSubmit={handleSubmit} className="space-y-4">
         <Textarea
