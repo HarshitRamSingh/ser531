@@ -314,6 +314,10 @@ WHERE {
       const response = await axios.get(
         `https://74.179.61.231:7200/repositories/ser531new`,
         {
+          headers: {
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
+          },
           params: {
             query: query.trim(),
           },
