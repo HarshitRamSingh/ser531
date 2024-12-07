@@ -3756,4 +3756,4 @@ export const stateCountyData: Record<string, string[]> = {
   ],
 };
 
-export const years = [2010, 2011, 2012, 2013, 2014, 2015];
+export const years = [2010.0, 2011.0, 2012.0, 2013.0, 2014.0, 2015.0];

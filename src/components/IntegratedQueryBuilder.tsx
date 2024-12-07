@@ -162,8 +162,40 @@ export function IntegratedQueryBuilder() {
     return variables.includes(variableTitle);
   };
 
+  const getMeasurementType = (variableType: string): string => {
+    if (variableDataProperties.count.includes(variableType)) {
+      return "smw:count";
+    } else if (variableDataProperties.percent.includes(variableType)) {
+      return "smw:percent";
+    } else if (variableDataProperties.percentageChange.includes(variableType)) {
+      return "smw:percentageChange";
+    } else if (variableDataProperties.countPerThousand.includes(variableType)) {
+      return "smw:countPerThousand";
+    } else if (variableDataProperties.acres.includes(variableType)) {
+      return "smw:acres";
+    } else if (variableDataProperties.acresPerThousand.includes(variableType)) { 
+      return "smw:acresPerThousand";
+    } else if (variableDataProperties.squareFeetPerThousand.includes(variableType)) {
+      return "smw:squareFeetPerThousand";
+    } else if (variableDataProperties.squareFeet.includes(variableType)) {
+      return "smw:squareFeet";
+    } else if (variableDataProperties.dollars.includes(variableType)) {
+      return "smw:dollars";
+    }
+    return "";
+  };
+
+  const getTimeType = (variableType: string): string => {
+    if (variableDataProperties.percentageChange.includes(variableType)) {
+      return "smw:timePeriod";
+    }
+    return "smw:individualYear";
+  };
+
   const handleGenerateQuery = () => {
     const stateAbbr = getAbbreviation(selectedState);
+    const measurementPredicate = getMeasurementType(selectedVariableType);
+    const timePredicate = getTimeType(selectedVariableType);
 
     let generatedQuery = `PREFIX owl: <http://www.w3.org/2002/07/owl#>
     PREFIX smw: <http://www.semanticweb.org/raajveer/ontologies/2024/10/SW531-Deliv3#>
@@ -172,7 +204,7 @@ export function IntegratedQueryBuilder() {
     PREFIX foaf: <http://xmlns.com/foaf/0.1/#>
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
-SELECT ?state ?county ?year ?variableTitle ?percentage
+SELECT ?state ?county ?time ?variableTitle ?measurementPredicate
 WHERE {
   ?state a smw:State ;
          foaf:title "${stateAbbr}"^^xsd:string ;
@@ -181,7 +213,7 @@ WHERE {
           foaf:title "${selectedCounty}"^^xsd:string ;
           smw:countyHasVariable ?demographic .
   ?demographic a smw:${selectedVariableCategory} ;
-          smw:individualYear ?year ;`;
+          ${timePredicate} ?time ;`;
 
     if (selectedVariableType) {
       generatedQuery += `
@@ -190,7 +222,7 @@ WHERE {
 
     generatedQuery += `
           foaf:title ?variableTitle ;
-          smw:percent ?percentage .`;
+          ${measurementPredicate} ?measurementPredicate .`;
 
     //   if (selectedYear) {
     //     generatedQuery += `
@@ -231,7 +263,7 @@ WHERE {
     try {
       setIsLoading(true);
       const response = await axios.get(
-        `http://74.179.61.231:7200/repositories/ser531`,
+        `http://74.179.61.231:7200/repositories/ser531new`,
         {
           params: {
             query: query.trim(),
