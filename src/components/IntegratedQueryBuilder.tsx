@@ -312,7 +312,7 @@ WHERE {
     try {
       setIsLoading(true);
       const response = await axios.get(
-        `http://74.179.61.231:7200/repositories/ser531new`,
+        `https://74.179.61.231:7200/repositories/ser531new`,
         {
           params: {
             query: query.trim(),
@@ -345,7 +345,7 @@ WHERE {
     try {
       setIsLoading(true);
       const response = await axios.get(
-        `http://74.179.61.231:7200/repositories/ser531new`,
+        `https://74.179.61.231:7200/repositories/ser531new`,
         {
           params: {
             query: generatedMortalityQuery.trim(),
