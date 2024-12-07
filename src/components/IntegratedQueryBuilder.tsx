@@ -423,7 +423,7 @@ WHERE {
           <SelectTrigger>
             <SelectValue placeholder="Select state" />
           </SelectTrigger>
-          <SelectContent>
+          <SelectContent className="max-h-60 overflow-y-auto">
             {Object.keys(stateCountyData).map((state) => (
               <SelectItem key={state} value={state}>
                 {state}
@@ -440,7 +440,7 @@ WHERE {
           <SelectTrigger>
             <SelectValue placeholder="Select county" />
           </SelectTrigger>
-          <SelectContent>
+          <SelectContent className="max-h-60 overflow-y-auto">
             {selectedState &&
               stateCountyData[selectedState].map((county) => (
                 <SelectItem key={county} value={county}>
@@ -458,7 +458,7 @@ WHERE {
           <SelectTrigger>
             <SelectValue placeholder="Select variable category" />
           </SelectTrigger>
-          <SelectContent>
+          <SelectContent className="max-h-60 overflow-y-auto">
             {Object.keys(variableCategoryData).map((category) => (
               <SelectItem key={category} value={category}>
                 {category}
@@ -475,7 +475,7 @@ WHERE {
           <SelectTrigger>
             <SelectValue placeholder="Select variable type" />
           </SelectTrigger>
-          <SelectContent>
+          <SelectContent className="max-h-60 overflow-y-auto">
             {selectedVariableCategory &&
               variableCategoryData[selectedVariableCategory].map((type) => (
                 <SelectItem key={type} value={type}>
